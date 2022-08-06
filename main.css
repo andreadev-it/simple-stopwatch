@@ -2,6 +2,8 @@
     --background: #000;
     --clockText: #ff0;
     --clockColon: #fff;
+    --btnBackground: #444;
+    --btnColor: #fff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,8 +29,32 @@ body, html {
     color: var(--clockColon);
     font-size: 5em;
     font-family: sans-serif;
+    align-self: end;
+}
+
+.controls {
+    align-self: start;
 }
 
 .minutes, .seconds {
     color: var(--clockText);
+}
+
+.btn {
+    padding: 0.5em 1em;
+    font-size: 2em;
+    border: solid 0px #000;
+    background-color: var(--btnBackground);
+    color: var(--btnColor);
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.main.stopped #stop {
+    display: none;
+}
+
+.main.running #start,
+.main.running #reset {
+    display: none;
 }
