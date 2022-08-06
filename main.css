@@ -1,0 +1,34 @@
+:root {
+    --background: #000;
+    --clockText: #ff0;
+    --clockColon: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+    --background: #fff;
+    --clockText: #000;
+    --clockColon: #444;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-color: var(--background);
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.time {
+    color: var(--clockColon);
+    font-size: 5em;
+    font-family: sans-serif;
+}
+
+.minutes, .seconds {
+    color: var(--clockText);
+}
